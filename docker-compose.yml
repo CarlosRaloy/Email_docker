@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python:
+    restart: always
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: script_edi_email
+    network_mode: "host"   # Utilizar el modo host para la red del contenedor
+    tty: true
